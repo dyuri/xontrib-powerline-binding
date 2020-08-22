@@ -1,0 +1,7 @@
+- refactor to a reusable class (?)
+- TOOLBAR
+- MULTILINE_PROMPT (ipython like?)
+- TITLE
+- xonsh specific segments
+  - execution time
+  - ???
