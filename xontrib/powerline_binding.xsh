@@ -2,6 +2,7 @@
 """
 import builtins
 import shutil
+from xonsh import jobs
 from powerline.shell import ShellPowerline
 
 
@@ -16,7 +17,7 @@ class FakeArgs(dict):
 powerline_args = FakeArgs({
     "ext": ["shell"],
     "renderer_module": "shell",
-    "jobnum": 0,  # TODO
+    "jobnum": 0,
     "last_pipe_status": 0,
     "last_exit_code": 0,
     "execution_time": 0
@@ -24,8 +25,6 @@ powerline_args = FakeArgs({
 segment_info = {
     "args": powerline_args,
     "environ": builtins.__xonsh__.env,
-    "client_id": 1,  # TODO ?
-    "local_theme": None,  # TODO
 }
 
 xpl = ShellPowerline(powerline_args)
@@ -33,6 +32,7 @@ xpl = ShellPowerline(powerline_args)
 
 @events.on_postcommand
 def update_args(cmd, rtn, out, ts):
+    powerline_args["jobnum"] = len(jobs.tasks)
     powerline_args["last_pipe_status"] = rtn
     powerline_args["last_exit_code"] = rtn
     powerline_args["execution_time"] = ts[1] - ts[0] if ts else 0
