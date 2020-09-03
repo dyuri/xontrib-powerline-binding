@@ -19,3 +19,14 @@ xontrib load powerline_binding
 ## Usage
 
 Uses `powerline` to setup you `$PROMPT` and `$RIGHT_PROMPT`.
+
+## Extra segments
+
+Currently includes the following xonsh specific powerline segments:
+
+### `powerline_xonsh.exec_time`
+
+Execution time of the last command.
+
+Highlight group used: `exec_time`
+

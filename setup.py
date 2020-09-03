@@ -8,7 +8,7 @@ except (IOError, OSError):
 
 setup(
     name="xontrib-powerline-binding",
-    version='0.1.0',
+    version='0.2.0',
     url='https://github.com/dyuri/xontrib-powerline-binding',
     license='MIT',
     author='Gyuri Horák',
@@ -19,7 +19,7 @@ setup(
     ],
     long_description=LONG_DESC,
     long_description_content_type='text/markdown',
-    packages=['xontrib'],
+    packages=['xontrib', 'powerline_xonsh'],
     package_dir={'xontrib': 'xontrib'},
     package_data={'xontrib': ['*.xsh']},
     platforms='any',

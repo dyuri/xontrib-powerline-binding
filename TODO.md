@@ -2,5 +2,4 @@
 - MULTILINE_PROMPT (ipython like?)
 - TITLE
 - xonsh specific segments
-  - execution time
   - ???
