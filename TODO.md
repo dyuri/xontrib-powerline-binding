@@ -1,5 +1,0 @@
-- TOOLBAR
-- MULTILINE_PROMPT (ipython like?)
-- TITLE
-- xonsh specific segments
-  - ???

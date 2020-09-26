@@ -20,6 +20,26 @@ xontrib load powerline_binding
 
 Uses `powerline` to setup you `$PROMPT` and `$RIGHT_PROMPT`.
 
+### Configuration
+
+Add `xonsh` (and optionally `xonshtoolbar`) section to your `powerline` `config.json`:
+
+```
+{
+  "ext": {
+    "xonsh": {
+      "theme": "mytheme"
+    },
+    "xonshtoolbar": {
+      "theme": "mytheme"
+    }
+  }
+}
+```
+
+Then create `themes/xonsh/mytheme.json` (and `themes/xonshtoolbar/mytheme.json`) with your theme configuration (see [Powerline documentation](https://powerline.readthedocs.io/en/master/configuration/reference.html#themes)).
+You can find example configuration in the `example` folder.
+
 ## Extra segments
 
 Currently includes the following xonsh specific powerline segments:
@@ -29,4 +49,3 @@ Currently includes the following xonsh specific powerline segments:
 Execution time of the last command.
 
 Highlight group used: `exec_time`
-

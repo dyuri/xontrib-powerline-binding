@@ -3,20 +3,13 @@
 import builtins
 import shutil
 from xonsh import jobs
-from powerline.shell import ShellPowerline
+from powerline_xonsh import XonshPowerline, PowerlineArgs
 
 
 __all__ = ()
 
 
-class FakeArgs(dict):
-    def __getattr__(self, attr):
-        return self.get(attr, "")
-
-
-powerline_args = FakeArgs({
-    "ext": ["shell"],
-    "renderer_module": "shell",
+powerline_args = PowerlineArgs({
     "jobnum": 0,
     "last_pipe_status": 0,
     "last_exit_code": 0,
@@ -27,7 +20,8 @@ segment_info = {
     "environ": builtins.__xonsh__.env,
 }
 
-xpl = ShellPowerline(powerline_args)
+xpl = XonshPowerline(powerline_args)
+xplt = XonshPowerline(powerline_args, "toolbar")
 
 
 @events.on_postcommand
@@ -53,13 +47,22 @@ def powerline_right_prompt():
     return xpl.render(width=width, side="right", segment_info=segment_info)
 
 
+def powerline_toolbar():
+    width = shutil.get_terminal_size(80)[0]
+    return xplt.render(width=width, side="left", segment_info=segment_info)
+
+
 def powerline_init():
-    builtins.__xonsh__.env["PROMPT"] = powerline_prompt
-    builtins.__xonsh__.env["RIGHT_PROMPT"] = powerline_right_prompt
-    # TODO
-    # - TOOLBAR
-    # - MULTILINE_PROMPT
-    # - TITLE
+    # check "xonsh" configuration
+    powerline_prompt()
+    if xpl.valid:
+        builtins.__xonsh__.env["PROMPT"] = powerline_prompt
+        builtins.__xonsh__.env["RIGHT_PROMPT"] = powerline_right_prompt
+
+    # check "xonshtoolbar" configuration
+    powerline_toolbar()
+    if xplt.valid:
+        builtins.__xonsh__.env["BOTTOM_TOOLBAR"] = powerline_toolbar
 
 
 builtins.aliases["powerline_init"] = powerline_init
