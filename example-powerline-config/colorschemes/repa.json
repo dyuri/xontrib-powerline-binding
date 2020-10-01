@@ -1,0 +1,92 @@
+{
+  "name": "repa",
+  "groups": {
+    "information:additional":     { "fg": "repa:gyellow", "bg": "gruvbox:dark2", "attrs": [] },
+    "information:regular":        { "fg": "repa:gyellow", "bg": "gruvbox:dark2", "attrs": ["bold"] },
+    "information:highlighted":    { "fg": "white", "bg": "gruvbox:dark2", "attrs": [] },
+    "information:priority":       { "fg": "brightyellow", "bg": "mediumorange", "attrs": [] },
+    "warning:regular":            { "fg": "white", "bg": "brightred", "attrs": ["bold"] },
+    "critical:failure":           { "fg": "white", "bg": "darkestred", "attrs": [] },
+    "critical:success":           { "fg": "white", "bg": "darkestgreen", "attrs": [] },
+
+    "background":                 { "fg": "white", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "background:divider":         { "fg": "gray5", "bg": "gruvbox:dark0_hard", "attrs": [] },
+
+    "session":                    { "fg": "black", "bg": "gray10", "attrs": ["bold"] },
+
+    "date":                       { "fg": "gray8", "bg": "gruvbox:dark0_hard", "attrs": [] },
+
+    "email_alert":                "warning:regular",
+    "email_alert_gradient":       { "fg": "white", "bg": "yellow_orange_red", "attrs": ["bold"] },
+
+    "weather":                    { "fg": "gray8", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "weather_temp_gradient":      { "fg": "blue_red", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "weather_condition_hot":      { "fg": "khaki1", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "weather_condition_snowy":    { "fg": "skyblue1", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "weather_condition_rainy":    { "fg": "skyblue1", "bg": "gruvbox:dark0_hard", "attrs": [] },
+
+    "uptime":                     { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "external_ip":                { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "internal_ip":                { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "network_load":               { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "network_load_gradient":      { "fg": "green_yellow_orange_red", "bg": "gray0", "attrs": [] },
+    "network_load_sent_gradient": "network_load_gradient",
+    "network_load_recv_gradient": "network_load_gradient",
+    "network_load:divider":       "background:divider",
+
+    "system_load":                { "fg": "gray8", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "system_load_gradient":       { "fg": "green_yellow_orange_red", "bg": "gruvbox:dark0_hard", "attrs": [] },
+
+    "environment":                { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "cpu_load_percent":           { "fg": "gray8", "bg": "gray0", "attrs": [] },
+    "cpu_load_percent_gradient":  { "fg": "green_yellow_orange_red", "bg": "gray0", "attrs": [] },
+
+    "battery":                    { "fg": "gray8", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "battery_gradient":           { "fg": "white_red", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "battery_full":               { "fg": "red", "bg": "gruvbox:dark0_hard", "attrs": [] },
+    "battery_empty":              { "fg": "white", "bg": "gruvbox:dark0_hard", "attrs": [] },
+
+    "player":                     { "fg": "gray10", "bg": "black", "attrs": [] },
+    "attached_clients":           { "fg": "gray8", "bg": "gray0", "attrs": [] },
+
+    "gitstatus":                  { "fg": "gruvbox:light2", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_branch":           { "fg": "gruvbox:light1", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_branch_clean":     { "fg": "repa:green", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_branch_dirty":     { "fg": "repa:red", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_branch_detached":  { "fg": "gruvbox:bright_orange", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_tag":              { "fg": "darkcyan", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_behind":           { "fg": "gray10", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_ahead":            { "fg": "gray10", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_staged":           { "fg": "green", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_unmerged":         { "fg": "brightred", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_changed":          { "fg": "mediumorange", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_untracked":        { "fg": "brightestorange", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus_stashed":          { "fg": "darkblue", "bg": "gruvbox:dark1", "attrs": [] },
+    "gitstatus:divider":          { "fg": "gray8", "bg": "gruvbox:dark1", "attrs": [] },
+
+    "hostname":                   { "fg": "gruvbox:dark0_hard", "bg": "repa:gyellow", "attrs": ["bold"] },
+    "user":                       { "fg": "gruvbox:bright_green", "bg": "gruvbox:dark3", "attrs": ["bold"] },
+
+    "cwd":                        "information:additional",
+    "cwd:current_folder":         "information:regular",
+    "cwd:divider":                { "fg": "gruvbox:dark3", "bg": "gruvbox:dark2", "attrs": [] },
+    "exit_status_fail":           { "fg": "gruvbox:bright_red", "bg": "gruvbox:light0_hard", "attrs": [] },
+    "exit_status_success":        { "fg": "repa:green", "bg": "gruvbox:dark2", "attrs": [] },
+    "exec_time":                  { "fg": "gruvbox:dark4", "bg": "gruvbox:dark1", "attrs": [] },
+
+    "branch":                     { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark1", "attrs": [] },
+    "branch_dirty":               { "fg": "repa:red", "bg": "gruvbox:dark1", "attrs": [] },
+    "branch_clean":               { "fg": "repa:green", "bg": "gruvbox:dark1", "attrs": [] },
+    "branch:divider":             { "fg": "gruvbox:dark2", "bg": "gruvbox:dark1", "attrs": [] },
+    "stash":                      "branch",
+    "stash:divider":              "branch:divider",
+
+    "virtualenv":                 { "fg": "gruvbox:bright_blue", "bg": "gruvbox:dark3", "attrs": [] },
+
+    "time":                       { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark3", "attrs": [] },
+    "time:divider":               { "fg": "gray5", "bg": "gruvbox:dark3", "attrs": [] },
+    "static_prompt1":             { "fg": "repa:ygreen", "bg": "gruvbox:dark0", "attrs": [] },
+    "static_prompt2":             { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark0", "attrs": [] },
+    "static_prompt3":             { "fg": "gruvbox:bright_red", "bg": "gruvbox:dark0", "attrs": [] }
+  }
+}

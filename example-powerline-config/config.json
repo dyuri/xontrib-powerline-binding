@@ -1,0 +1,15 @@
+{
+  "common": {
+    "term_truecolor": true
+  },
+  "ext": {
+    "xonsh": {
+      "theme": "mytheme",
+      "colorscheme": "repa"
+    },
+    "xonshtoolbar_": {
+      "theme": "mytheme",
+      "colorscheme": "repa"
+    }
+  }
+}

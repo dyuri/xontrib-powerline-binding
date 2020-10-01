@@ -38,7 +38,7 @@ Add `xonsh` (and optionally `xonshtoolbar`) section to your `powerline` `config.
 ```
 
 Then create `themes/xonsh/mytheme.json` (and `themes/xonshtoolbar/mytheme.json`) with your theme configuration (see [Powerline documentation](https://powerline.readthedocs.io/en/master/configuration/reference.html#themes)).
-You can find example configuration in the `example` folder.
+You can find my example powerline configuration in the `example-powerline-config` folder.
 
 ## Extra segments
 
