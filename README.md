@@ -2,6 +2,8 @@
 
 [Powerline](https://github.com/powerline/powerline) binding for [xonsh](https://xon.sh), so you can use your existing `powerline` prompt in `xonsh`.
 
+![Example image](xonsh_powerline_binding_example.png)
+
 ## Install
 
 Install using pip
