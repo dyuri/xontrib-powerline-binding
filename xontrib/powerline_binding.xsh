@@ -2,6 +2,7 @@
 """
 import builtins
 import shutil
+import os
 from xonsh import jobs
 from powerline_xonsh import XonshPowerline, PowerlineArgs
 
@@ -18,6 +19,7 @@ powerline_args = PowerlineArgs({
 segment_info = {
     "args": powerline_args,
     "environ": builtins.__xonsh__.env,
+    "client_id": os.getpid(),
 }
 
 xpl = XonshPowerline(powerline_args)
